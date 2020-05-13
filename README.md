@@ -1,0 +1,1 @@
+Implementation of the Guassian generative model for the HeartSteps case from https://arxiv.org/pdf/1708.04001.pdf
