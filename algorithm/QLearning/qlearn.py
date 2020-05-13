@@ -23,13 +23,9 @@ class QLearn:
     def learnQ(self, state, action, reward, value):
         oldv = self.q.get((state, action), None)
         if oldv is None:
-            self.q[(state, action)] = reward   # was reward
-            # print("old is none")
-            # print(self.q)
+            self.q[(state, action)] = reward
         else:
             self.q[(state, action)] = oldv + self.alpha * (value - oldv)
-            # print("else")
-            # print(self.q)
 
     def chooseAction(self, state):
         if random.random() < self.epsilon:
